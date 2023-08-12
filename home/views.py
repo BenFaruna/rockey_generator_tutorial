@@ -9,6 +9,9 @@ from django.http import HttpResponse
 # Create your views here.
 
 def index(request):
-
+    data = {'heading': 'Tutorial Dashboard'}
     # Page from the theme 
-    return render(request, 'pages/index.html')
+    return render(request, 'pages/index.html', context=data)
+
+def authors(request):
+    return render(request, 'pages/authors.html')
